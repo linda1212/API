@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scroll</title>
+	
+<style>
+div{box-sizing:border-box;}
+body{background: #333945;font-size: 14px;}
+h3,h4{color: #fff}
+
+.container{position: relative;float: left;margin: 30px;border: solid 1px #292c33}
+	
+.c1
+{
+	width:300px;
+	height: 500px;
+}
+
+.c2
+{
+	width:400px;
+	height: 600px;
+}
+
+.c3
+{
+	width:500px;
+	height: 800px;
+}
+
+.ct-item
+{
+	margin: 0 20px;
+}
+.ci1{background: #414958;height: 32px;line-height: 32px;padding-left: 20px;color: #fff;}
+.ci2{height: 50px;line-height: 44px;padding-left: 20px;color: #fff;}
+
+
+.c4
+{
+	max-height: 600px;
+	width: 400px;
+}
+
+</style>
+
+</head>
+<body>
+
+<h3>该插件仅提供一种滚动条的解决方案，因此对页面元素有一些限制</h3>
+<h4>_scroll 为需要出滚动的区域，改元素position必须为relative、absolute</h4>
+<h4>_panel-box 为滚动的实际内容的父容器，插件会将改元素设置为absolute，配合_scroll作滚动</h4>
+<h4>_scroll，_panel-box名称均可任意取名，但如果_panel-box改名后需在实例化是传入实际名称</h4>
+	
+	<div class="container c1 _scroll">
+		<div class="_panel-box">
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+		</div>
+	</div>
+
+	<div class="container c2 _scroll">
+		<div class="_panel-box">
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+		</div>
+	</div>
+
+	<div class="container c3 _scroll">
+		<div class="_panel-box">
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+		</div>
+	</div>
+
+	<button id="add">c4添加元素</button><button id="remove">c4移除元素</button>
+	<div class="container c4 _scroll-mh">
+		<div class="_panel-box" id="c4-panel">
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+			<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>
+		</div>
+	</div>
+
+
+
+
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="yi-scroll.js"></script>
+	
+	<script>
+		$("._scroll").yi_scroll();		
+		$("._scroll-mh").yi_scroll({isMaxHeight:true,isBar:true});
+
+		$("#add").click(function(){
+			$("#c4-panel").append('<div class="ct-item"><div class="ci1">客户名称</div><div class="ci2">搜狗输入法</div></div>');
+		});
+
+		$("#remove").click(function(){
+			$("#c4-panel").find(".ct-item").last().remove();
+		});
+	</script>
+
+
+</body>
+</html>
